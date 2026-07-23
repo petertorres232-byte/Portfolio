@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/script.js",
+  "scripts": {
+    "start": "node js/script.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petertorres232-byte/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/petertorres232-byte/Portfolio/issues"
+  },
+  "homepage": "https://github.com/petertorres232-byte/Portfolio#readme"
+}

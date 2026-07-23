@@ -60,3 +60,15 @@
     background-color: #0f766e;
     border-color: #0f766e;
 }
+
+/* ==========================================================================
+   3. Custom Layout & Utility Components
+   ========================================================================== */
+/* Contact Page Card Width Limit */
+.contact-card {
+    max-width: 650px;
+}
+/* Gallery Image Height Rules */
+.gallery-img {
+    min-height: 220px;
+}
