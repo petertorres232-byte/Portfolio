@@ -37,16 +37,75 @@
 }
 
 /* ==========================================================================
-   2. Modern Visual Enhancements
+   2. Modern Visual Enhancements & Hover Animations
    ========================================================================== */
-/* Smooth Card & Button Hover Effects */
+/* Section Header (h2) Hover Animation */
+h2.text-primary {
+    display: inline-block; /* Required so transform and relative position apply cleanly */
+    position: relative;
+    transform-origin: left center; /* Ensures scaling expands outward from the left edge */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h2.text-primary:hover {
+    transform: scale(1.03) translateX(4px); /* Expands text by 3% AND shifts slightly right */
+    cursor: default;
+}
+
+/* Expanding Underline Effect on Header Hover */
+h2.text-primary::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: var(--bs-primary);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+h2.text-primary:hover::after {
+    width: 100%;
+}
+
+/* Smooth Card & Gallery Hover Effects */
 .card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #gallery .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Inner Image Zoom Effect */
+.gallery-img {
+    min-height: 220px;
+    transition: transform 0.4s ease;
+}
+
+#gallery .card:hover .gallery-img {
+    transform: scale(1.05);
+}
+
+/* Nav Link Hover Animation */
+.navbar-nav .nav-link {
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: translateY(-2px);
+}
+
+/* Connect / Action Buttons Hover Interaction */
+#links .btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#links .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Custom Input Focus Ring Color */
@@ -61,14 +120,22 @@
     border-color: #2d51f0;
 }
 
+/* Respect User System Settings for Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .card,
+    .gallery-img,
+    .navbar-nav .nav-link,
+    #links .btn,
+    h2.text-primary,
+    h2.text-primary::after {
+        transition: none !important;
+    }
+}
+
 /* ==========================================================================
    3. Custom Layout & Utility Components
    ========================================================================== */
 /* Contact Page Card Width Limit */
 .contact-card {
     max-width: 650px;
-}
-/* Gallery Image Height Rules */
-.gallery-img {
-    min-height: 220px;
 }
