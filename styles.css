@@ -2,15 +2,15 @@
    1. Deep Teal Brand Theme Overrides
    ========================================================================== */
 :root {
-    --bs-primary: #0f766e;           /* Deep teal brand color */
-    --bs-primary-rgb: 15, 118, 110;
-    --primary-hover: #115e59;
+    --bs-primary: #2d51f0;           /* Deep teal brand color */
+    --bs-primary-rgb: 45, 81, 240; /* RGB for deep teal brand color */
+    --primary-hover: #2d51f0;
 }
 
 /* Custom Primary Color Button Overrides */
 .btn-primary {
-    background-color: #0f766e !important;
-    border-color: #0f766e !important;
+    background-color: #2d51f0 !important;
+    border-color: #2d51f0 !important;
 }
 
 .btn-primary:hover, .btn-primary:focus {
@@ -19,21 +19,21 @@
 }
 
 .btn-outline-primary {
-    color: #0f766e !important;
-    border-color: #0f766e !important;
+    color: #2d51f0 !important;
+    border-color: #2d51f0 !important;
 }
 
 .btn-outline-primary:hover {
-    background-color: #0f766e !important;
+    background-color: #2d51f0 !important;
     color: #ffffff !important;
 }
 
 .text-primary {
-    color: #0f766e !important;
+    color: #2d51f0 !important;
 }
 
 .bg-primary {
-    background-color: #0f766e !important;
+    background-color: #2d51f0 !important;
 }
 
 /* ==========================================================================
@@ -51,14 +51,14 @@
 
 /* Custom Input Focus Ring Color */
 .form-control:focus, .form-select:focus {
-    border-color: #0f766e;
-    box-shadow: 0 0 0 0.25rem rgba(15, 118, 110, 0.25);
+    border-color: #2d51f0;
+    box-shadow: 0 0 0 0.25rem rgba(45, 81, 240, 0.25);
 }
 
 /* Custom Accent Color for Radios and Checkboxes */
 .form-check-input:checked {
-    background-color: #0f766e;
-    border-color: #0f766e;
+    background-color: #2d51f0;
+    border-color: #2d51f0;
 }
 
 /* ==========================================================================
